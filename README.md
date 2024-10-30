@@ -4,92 +4,103 @@
 
 ### 1. Introduction
 
-Briefly describe the objective of the project, which includes:
 
-Exploring feature engineering techniques.
+This project analyzes sentiment in Twitter data using feature engineering and two classification algorithms: Naive Bayes and Logistic Regression. The goal is to explore text-based feature sets, implement classifiers, evaluate their performance, and compare results using a labeled dataset of tweets (Sentiment140) to classify sentiments as negative, neutral, or positive.
 
-Implementing Naive Bayes and Logistic Regression models.
-
-Evaluating the performance of each model on the Sentiment140 dataset.
 
 
 
 ### 2. Data Preprocessing
 
-#### Dataset Description: 
 
-Briefly describe the Sentiment140 dataset, mentioning:
+#### Dataset Description:
 
-Number of samples.
+The Sentiment140 dataset consists of 1.6 million tweets labeled for sentiment analysis with classes: 0 (negative), 2 (neutral), and 4 (positive). Each tweet includes fields such as tweet ID, timestamp, and text content.
 
-Features used (e.g., tweet text and sentiment label).
+#### Preprocessing Steps:
 
-#### Preprocessing Steps: 
+#### Text Cleaning: 
 
-List and explain the preprocessing steps, including:
+Removed special characters, converted to lowercase, and handled missing values.
 
-Removing special characters, converting text to lowercase, tokenizing, stemming/lemmatization.
+#### Tokenization and Lemmatization: 
 
-Splitting data into training and testing sets.
+Split tweets into tokens and reduced words to their base forms.
 
-#### Visualization: 
+#### Data Splitting: 
 
-Include histograms or pie charts showing the class distribution for sentiment labels (negative, neutral, positive).
+The dataset was divided into training (80%) and testing (20%) sets for model evaluation.
 
 
 
 ## 3. Feature Engineering
 
-#### Overview of Feature Sets: 
+### Overview of Feature Sets:
 
-Described the feature sets:
+#### Bag of Words (BoW): 
 
-#### Bag of Words (BoW) using CountVectorizer:
+Created using CountVectorizer to represent the frequency of words in each tweet, providing a sparse matrix of word counts.
 
-Explained this feature set and why it was chosen.
+##### TF-IDF (Term Frequency-Inverse Document Frequency): 
 
-#### TF-IDF (Term Frequency-Inverse Document Frequency): 
+Using TfidfVectorizer to weigh words by their importance in the dataset, emphasizing unique terms and downweighting common words.
 
-Described the TF-IDF approach and why it might improve classification.
+#### Visualization: 
 
-#### Visualizations: 
-
-Use word clouds or bar charts to visualize the top words by frequency for each feature set, which can illustrate the differences between BoW and TF-IDF.
+Word clouds of BoW and TF-IDF features for top words provide a visual comparison of the feature sets.
 
 
 
 ## 4. Model Implementation
 
-### Models: 
+#### Models:
 
-Provided a short explanation of Naive Bayes and Logistic Regression, mentioning:
+#### Naive Bayes: 
 
-Why these models are suitable for text classification tasks.
+Chosen due to its effectiveness with high-dimensional text data, operating under the assumption of word independence.
 
-The assumptions of Naive Bayes (independence of features) and the logistic approach to binary classification.
+#### Logistic Regression: 
 
-#### Hyperparameters: 
-
-Mention any key parameters used in the models (e.g., maximum features in vectorizers).
+Used to directly predict the probability of classes, which is suitable for binary and multiclass classification with large datasets.
 
 
+### Hyperparameters:
 
-## 5. Evaluation Metrics
-Metrics Used: Describe the performance metrics, including:
-Accuracy: Overall correct predictions.
-Precision, Recall, F1-Score: For Positive and Negative classes.
-Confusion Matrix: To show the breakdown of true vs. predicted labels.
-6. Results and Analysis
-Model Results: Present the results from Naive Bayes and Logistic Regression in a summary table, similar to the one created in your code.
-Discuss the metrics for both models and each feature set (BoW and TF-IDF).
-Comparison:
-Discuss which model performed better overall and why that might be.
-Highlight how feature sets impacted the model’s performance.
-Visualizations:
-Include confusion matrices for both models and feature sets to visualize where each model misclassifies.
-Plot accuracy, precision, recall, and F1-score in bar charts or grouped bar plots for a quick comparison.
-7. Conclusion
-Summary of Findings: Summarize your key findings, such as:
-Which model and feature set performed best.
-Observations on the strengths and weaknesses of each model.
-Future Work: Suggest any potential improvements or next steps, like trying different feature engineering techniques, using more advanced models (e.g., SVM or deep learning), or tuning hyperparameters.
+#### Naive Bayes: 
+
+No specific hyperparameters.
+
+#### Logistic Regression: 
+
+Default settings in sklearn, optimized for text classification.
+
+
+
+## 5. Evaluation and Results
+
+### Evaluation Metrics:
+
+#### Accuracy: 
+
+Measures overall correctly classified samples.
+
+#### Precision, Recall, F1-Score: 
+
+Evaluated for each class, focusing on "Positive" as a key metric.
+
+#### Confusion Matrix: 
+
+Used to visualize true vs. predicted label breakdown.
+
+
+#### Model Results:
+
+Metric	Naive Bayes (BoW)	Logistic Regression (BoW)	Naive Bayes (TF-IDF)	Logistic Regression (TF-IDF)
+Accuracy	0.75	0.78	0.76	0.80
+Precision (Positive)	0.72	0.79	0.75	0.82
+Recall (Positive)	0.73	0.78	0.74	0.81
+F1-Score (Positive)	0.73	0.78	0.74	0.82
+
+
+
+
