@@ -1,124 +1,81 @@
-## Title: Sentiment Analysis of Twitter Data Using Naive Bayes and Logistic Regression
+## Sentiment Analysis on Twitter Data Using Naive Bayes and Logistic Regression
 
 
 
-### 1. Introduction
+### Project Overview
 
+This project implements Naive Bayes and Logistic Regression classifiers on the Sentiment140 dataset to analyze tweet sentiment. 
+Feature engineering methods include Bag of Words (BoW) and TF-IDF representations.
 
-This project analyzes sentiment in Twitter data using feature engineering and two classification algorithms: Naive Bayes and Logistic Regression. The goal is to explore text-based feature sets, implement classifiers, evaluate their performance, and compare results using a labeled dataset of tweets (Sentiment140) to classify sentiments as negative, neutral, or positive.
 
+### Prerequisites
 
+Ensure Python 3.6+ is installed. Use pip to install dependencies.
 
 
-### 2. Data Preprocessing
+### Dependencies
 
+Install the following packages using the command below:
 
-#### Dataset Description:
+## pip install pandas scikit-learn matplotlib seaborn nltk
 
-The Sentiment140 dataset consists of 1.6 million tweets labeled for sentiment analysis with classes: 0 (negative), 2 (neutral), and 4 (positive). Each tweet includes fields such as tweet ID, timestamp, and text content.
 
-#### Preprocessing Steps:
+### pandas: 
 
-#### Text Cleaning: 
+For data manipulation.
 
-Removed special characters, converted to lowercase, and handled missing values.
 
-#### Tokenization and Lemmatization: 
+### scikit-learn: 
 
-Split tweets into tokens and reduced words to their base forms.
+For machine learning models and metrics.
 
-#### Data Splitting: 
 
-The dataset was divided into training (80%) and testing (20%) sets for model evaluation.
+### matplotlib & seaborn: 
 
+For visualizations.
 
 
-## 3. Feature Engineering
+### nltk: 
 
-### Overview of Feature Sets:
+For text preprocessing, tokenization, and lemmatization.
 
-#### Bag of Words (BoW): 
 
-Created using CountVectorizer to represent the frequency of words in each tweet, providing a sparse matrix of word counts.
+## Dataset
 
-##### TF-IDF (Term Frequency-Inverse Document Frequency): 
+Download the Sentiment140 dataset from Kaggle and save it as training.1600000.processed.noemoticon.csv in the project folder.
 
-Using TfidfVectorizer to weigh words by their importance in the dataset, emphasizing unique terms and downweighting common words.
+### Instructions
 
-#### Visualization: 
 
-Word clouds of BoW and TF-IDF features for top words provide a visual comparison of the feature sets.
+#### Preprocess Data: 
 
+The code will automatically preprocess text by removing special characters, converting to lowercase, tokenizing, and lemmatizing.
+Feature Engineering: The script generates BoW and TF-IDF feature sets.
 
 
-## 4. Model Implementation
+#### Model Training and Evaluation:
 
-#### Models:
 
-#### Naive Bayes: 
+The Naive Bayes and Logistic Regression models are trained, evaluated, and compared based on accuracy, precision, recall, and F1-score.
 
-Chosen due to its effectiveness with high-dimensional text data, operating under the assumption of word independence.
 
-#### Logistic Regression: 
+### How to Run the Code
 
-Used to directly predict the probability of classes, which is suitable for binary and multiclass classification with large datasets.
+Place the Sentiment140 dataset file in the project directory.
 
+Execute the script
 
-### Hyperparameters:
+### python sentiment_analysis.py
 
-#### Naive Bayes: 
+This will:
 
-No specific hyperparameters.
+Preprocess data.
 
-#### Logistic Regression: 
+Generate feature sets.
 
-Default settings in sklearn, optimized for text classification.
+Train and evaluate both models.
 
 
+### Results: 
 
-## 5. Evaluation and Results
-
-### Evaluation Metrics:
-
-#### Accuracy: 
-
-Measures overall correctly classified samples.
-
-#### Precision, Recall, F1-Score: 
-
-Evaluated for each class, focusing on "Positive" as a key metric.
-
-#### Confusion Matrix: 
-
-Used to visualize true vs. predicted label breakdown.
-
-
-#### Model Results:
-
-|Metric|	               Naive Bayes (BoW)|	    |Logistic Regression (BoW)|	  |Naive Bayes (TF-IDF)|	 |Logistic Regression (TF-IDF)|
---------               --------------------     ---------------------------   ----------------------   ------------------------------
-|Accuracy|	          |   0.75	                     0.78	                     0.76	                    0.80
-|Precision (Positive)|	 0.72	                     0.79	                     0.75	                    0.82
-|Recall (Positive)	 |   0.73	                     0.78	                     0.74	                    0.81
-|F1-Score (Positive)   0.73	                     0.78	                     0.74	                    0.82
-
-
-## Analysis:
-
-### Naive Bayes 
-
-performs well with both feature sets, showing balanced recall and precision.
-
-### Logistic Regression 
-
-slightly outperforms Naive Bayes on both BoW and TF-IDF, likely due to its ability to model complex feature interactions.
-
-### TF-IDF 
-
-features improved both models’ performance by emphasizing less frequent but meaningful words.
-
-### Visualization:
-
-Confusion matrices for each model and feature set provide an in-depth look at classification errors. Bar charts of accuracy, precision, recall, and F1-score help visualize performance differences.
-
-
+The script will output a performance summary table and save visualizations in the results folder.
