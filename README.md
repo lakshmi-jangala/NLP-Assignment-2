@@ -1,19 +1,29 @@
-Title: Sentiment Analysis of Twitter Data Using Naive Bayes and Logistic Regression
-Your Name
-Date
-Course Information
+## Title: Sentiment Analysis of Twitter Data Using Naive Bayes and Logistic Regression
+
 1. Introduction
+
 Briefly describe the objective of the project, which includes:
+
 Exploring feature engineering techniques.
+
 Implementing Naive Bayes and Logistic Regression models.
+
 Evaluating the performance of each model on the Sentiment140 dataset.
+
 2. Data Preprocessing
+
 Dataset Description: Briefly describe the Sentiment140 dataset, mentioning:
+
 Number of samples.
+
 Features used (e.g., tweet text and sentiment label).
+
 Preprocessing Steps: List and explain the preprocessing steps, including:
+
 Removing special characters, converting text to lowercase, tokenizing, stemming/lemmatization.
+
 Splitting data into training and testing sets.
+
 Visualization: Include histograms or pie charts showing the class distribution for sentiment labels (negative, neutral, positive).
 3. Feature Engineering
 Overview of Feature Sets: Describe the feature sets you engineered:
