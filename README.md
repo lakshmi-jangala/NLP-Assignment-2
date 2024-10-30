@@ -95,11 +95,12 @@ Used to visualize true vs. predicted label breakdown.
 
 #### Model Results:
 
-Metric	        Naive Bayes (BoW)	    Logistic Regression (BoW)	   Naive Bayes (TF-IDF)	   Logistic Regression (TF-IDF)
-Accuracy	            0.75	                     0.78	                     0.76	                    0.80
-Precision (Positive)	0.72	                     0.79	                     0.75	                    0.82
-Recall (Positive)	    0.73	                     0.78	                     0.74	                    0.81
-F1-Score (Positive)	  0.73	                     0.78	                     0.74	                    0.82
+|Metric|	       | Naive Bayes (BoW)|	    |Logistic Regression (BoW)|	  |Naive Bayes (TF-IDF)|	 |Logistic Regression (TF-IDF)|
+--------         --------------------     ---------------------------   ----------------------   ------------------------------
+|Accuracy|	            0.75	                     0.78	                     0.76	                    0.80
+|Precision (Positive)|	0.72	                     0.79	                     0.75	                    0.82
+|Recall (Positive)|	    0.73	                     0.78	                     0.74	                    0.81
+|F1-Score (Positive)|	  0.73	                     0.78	                     0.74	                    0.82
 
 
 ## Analysis:
