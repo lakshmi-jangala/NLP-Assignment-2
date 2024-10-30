@@ -1,5 +1,7 @@
 ## Title: Sentiment Analysis of Twitter Data Using Naive Bayes and Logistic Regression
 
+
+
 ### 1. Introduction
 
 Briefly describe the objective of the project, which includes:
@@ -10,32 +12,69 @@ Implementing Naive Bayes and Logistic Regression models.
 
 Evaluating the performance of each model on the Sentiment140 dataset.
 
-2. Data Preprocessing
 
-Dataset Description: Briefly describe the Sentiment140 dataset, mentioning:
+
+### 2. Data Preprocessing
+
+#### Dataset Description: 
+
+Briefly describe the Sentiment140 dataset, mentioning:
 
 Number of samples.
 
 Features used (e.g., tweet text and sentiment label).
 
-Preprocessing Steps: List and explain the preprocessing steps, including:
+#### Preprocessing Steps: 
+
+List and explain the preprocessing steps, including:
 
 Removing special characters, converting text to lowercase, tokenizing, stemming/lemmatization.
 
 Splitting data into training and testing sets.
 
-Visualization: Include histograms or pie charts showing the class distribution for sentiment labels (negative, neutral, positive).
-3. Feature Engineering
-Overview of Feature Sets: Describe the feature sets you engineered:
-Bag of Words (BoW) using CountVectorizer: Explain this feature set and why it was chosen.
-TF-IDF (Term Frequency-Inverse Document Frequency): Describe the TF-IDF approach and why it might improve classification.
-Visualizations: Use word clouds or bar charts to visualize the top words by frequency for each feature set, which can illustrate the differences between BoW and TF-IDF.
-4. Model Implementation
-Models: Provide a short explanation of Naive Bayes and Logistic Regression, mentioning:
+#### Visualization: 
+
+Include histograms or pie charts showing the class distribution for sentiment labels (negative, neutral, positive).
+
+
+
+## 3. Feature Engineering
+
+#### Overview of Feature Sets: 
+
+Described the feature sets:
+
+#### Bag of Words (BoW) using CountVectorizer:
+
+Explained this feature set and why it was chosen.
+
+#### TF-IDF (Term Frequency-Inverse Document Frequency): 
+
+Described the TF-IDF approach and why it might improve classification.
+
+#### Visualizations: 
+
+Use word clouds or bar charts to visualize the top words by frequency for each feature set, which can illustrate the differences between BoW and TF-IDF.
+
+
+
+## 4. Model Implementation
+
+### Models: 
+
+Provided a short explanation of Naive Bayes and Logistic Regression, mentioning:
+
 Why these models are suitable for text classification tasks.
+
 The assumptions of Naive Bayes (independence of features) and the logistic approach to binary classification.
-Hyperparameters: Mention any key parameters used in the models (e.g., maximum features in vectorizers).
-5. Evaluation Metrics
+
+#### Hyperparameters: 
+
+Mention any key parameters used in the models (e.g., maximum features in vectorizers).
+
+
+
+## 5. Evaluation Metrics
 Metrics Used: Describe the performance metrics, including:
 Accuracy: Overall correct predictions.
 Precision, Recall, F1-Score: For Positive and Negative classes.
