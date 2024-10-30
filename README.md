@@ -95,12 +95,29 @@ Used to visualize true vs. predicted label breakdown.
 
 #### Model Results:
 
-Metric	Naive Bayes (BoW)	Logistic Regression (BoW)	Naive Bayes (TF-IDF)	Logistic Regression (TF-IDF)
-Accuracy	0.75	0.78	0.76	0.80
-Precision (Positive)	0.72	0.79	0.75	0.82
-Recall (Positive)	0.73	0.78	0.74	0.81
-F1-Score (Positive)	0.73	0.78	0.74	0.82
+Metric	        Naive Bayes (BoW)	    Logistic Regression (BoW)	   Naive Bayes (TF-IDF)	   Logistic Regression (TF-IDF)
+Accuracy	            0.75	                     0.78	                     0.76	                    0.80
+Precision (Positive)	0.72	                     0.79	                     0.75	                    0.82
+Recall (Positive)	    0.73	                     0.78	                     0.74	                    0.81
+F1-Score (Positive)	  0.73	                     0.78	                     0.74	                    0.82
 
 
+## Analysis:
+
+### Naive Bayes 
+
+performs well with both feature sets, showing balanced recall and precision.
+
+### Logistic Regression 
+
+slightly outperforms Naive Bayes on both BoW and TF-IDF, likely due to its ability to model complex feature interactions.
+
+### TF-IDF 
+
+features improved both models’ performance by emphasizing less frequent but meaningful words.
+
+### Visualization:
+
+Confusion matrices for each model and feature set provide an in-depth look at classification errors. Bar charts of accuracy, precision, recall, and F1-score help visualize performance differences.
 
 
