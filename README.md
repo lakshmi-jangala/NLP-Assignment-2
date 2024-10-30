@@ -1,6 +1,6 @@
 ## Title: Sentiment Analysis of Twitter Data Using Naive Bayes and Logistic Regression
 
-1. Introduction
+### 1. Introduction
 
 Briefly describe the objective of the project, which includes:
 
